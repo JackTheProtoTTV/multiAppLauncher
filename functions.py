@@ -15,7 +15,7 @@ def grabApps():
 
 def addApp(name, path):
       with open(appList, "a") as file:
-            file.write(f"{name},{path}\n")
+            file.write(f"{name.replace('"', "")},{path}\n")
 
 def removeApp(appName):
     with open(appList, "r") as file:

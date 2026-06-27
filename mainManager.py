@@ -4,7 +4,7 @@ import os
 from functions import grabApps, launchApps, listApps, addApp, removeApp
 
 areThereApps = False
-
+parentDirectory = Path(__file__).parent
 
 
 
@@ -13,6 +13,7 @@ areThereApps = False
 def main():
     while True:
         appList = grabApps()
+        appListFile = parentDirectory / "applist.txt"
         print("-" * 26)
         print("Jack's Stream App Launcher!")
         print("-" * 26)
@@ -51,7 +52,7 @@ def main():
                         if path.lower() == "back":
                             break
                         try:
-                            path = Path(path)
+                            path = Path(path.replace('"', ""))
                             if not path.is_file():
                                 raise ValueError
                             addApp(name, path)
@@ -78,7 +79,7 @@ def main():
                             print("-" * 26)
                             print("What App Would You Like To Remove?")
                             appToRemove = input("")
-                            with open(appList, "r") as file:
+                            with open(appListFile, "r") as file:
                                 if appToRemove in file.read():
                                     removeApp(appToRemove)
                                     print(" ")
