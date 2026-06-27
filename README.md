@@ -20,4 +20,5 @@ I wanted to make this as simple as possible for people :D
 Just run the "Launch Apps.bat" to skip the menu!
 
 ## Patch Notes
+v1.2: Multiple apps will now launch!
 v1.1: .bat files have been seperated into "App Manager.bat" and "Launch Apps.bat", python scripts have been seperated accordingly, auto-install of python now actually works.

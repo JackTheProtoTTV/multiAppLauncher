@@ -50,4 +50,4 @@ def launchApps():
     appList = grabApps()
     for sublist in appList:
         os.startfile(sublist[1])
-        exit()
+    exit()
