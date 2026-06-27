@@ -1,6 +1,7 @@
 # A Simple App Launcher, That Launches Multiple Executables from Paths!
 
 Honestly this is just a really simple python project I thought I would make public! I haven't been able to find a simple, user-friendly app that does this, so I made it!
+(Special Thanks to SharpTheProtogen for testing :3)
 
 ## How To Use:
 1. Run The "App Manager.bat" file! It automatically checks if you have python installed!
@@ -19,4 +20,4 @@ I wanted to make this as simple as possible for people :D
 Just run the "Launch Apps.bat" to skip the menu!
 
 ## Patch Notes
-v1.1: .bat files have been seperated into "App Manager.bat" and "Launch Apps.bat", python scripts have been seperated accordingly.
+v1.1: .bat files have been seperated into "App Manager.bat" and "Launch Apps.bat", python scripts have been seperated accordingly, auto-install of python now actually works.

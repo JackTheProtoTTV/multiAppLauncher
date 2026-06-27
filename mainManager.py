@@ -55,12 +55,14 @@ def main():
                             if not path.is_file():
                                 raise ValueError
                             addApp(name, path)
-                            print("Would You Like To Add Another App?")
+                            print("Would You Like To Add Another App? (Y/N)")
                             userChoice = input("")
                             if userChoice.lower() == "y":
                                 continue
                             elif userChoice.lower() == "n":
                                 break
+                            else:
+                                print("[ERROR] Please input Y or N")
                         except (ValueError, TypeError):
                             example = (r"C:\path\of\your\file.exe")
                             print(f"[ERROR] File Path must lead to executable file! ({example})")
@@ -80,7 +82,7 @@ def main():
                                 if appToRemove in file.read():
                                     removeApp(appToRemove)
                                     print(" ")
-                                    print("Would You Like To Remove Another App?")
+                                    print("Would You Like To Remove Another App? (Y/N)")
                                     userChoice = input("")
                                     if userChoice.lower() == "y":
                                         continue

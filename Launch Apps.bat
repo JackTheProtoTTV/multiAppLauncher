@@ -2,16 +2,16 @@
 setlocal enabledelayedexpansion
 
 echo Checking for Python...
-py --version >nul 2>&1
+python --version >nul 2>&1
 
 if %errorlevel% equ 0 (
     echo [SUCCESS] Python is installed! Running app!
-    py "%~dp0runApps.py"
+    python "%~dp0runApps.py"
     goto end
 ) else (
     echo [WARNING] Python is not installed.
     echo Preparing to install Python via winget...
-    winget install --id Python.Python.3 --silent --accept-source-agreements --accept-package-agreements
+    start /wait winget install --id Python.Python.3.13 --exact --accept-source-agreements --accept-package-agreements --override "/passive PrependPath=1"
     
     if !errorlevel! equ 0 (
         echo [SUCCESS] Python installed!
