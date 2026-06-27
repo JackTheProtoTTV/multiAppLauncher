@@ -6,7 +6,7 @@ py --version >nul 2>&1
 
 if %errorlevel% equ 0 (
     echo [SUCCESS] Python is installed! Running app!
-    py "%~dp0runApps.py"
+    py "%~dp0mainManager.py"
     goto end
 ) else (
     echo [WARNING] Python is not installed.
